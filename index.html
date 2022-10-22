@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="page">
+        <section class="page__timetable timetable">
+          <div class="timetable__container">
+            <div class="timetable__body">
+              <form action="#" name="ticket" class="timetable__form">
+                <div class="timetable__direction dicrection-timetable">
+                  <select name="route" id="route" class="dicrection-timetable__select">
+                    <option value="из A в B" data-price="700">из A в B</option>
+                    <option value="из B в A" data-price="700">из B в A</option>
+                    <option value="из A в B и обратно в A" data-price="1200">
+                      из A в B и обратно в А
+                    </option>
+                  </select>
+                </div>
+                <div class="timetable__choose choose-timetable">
+                  <label for="time">Выберите время</label>
+                  <select disabled name="time" id="time">
+                    <option value="16:00(из A в B)">16:00(из A в B)</option>
+                    <option value="16:30(из A в B)">16:30(из A в B)</option>
+                    <option value="16:45(из A в B)">16:45(из A в B)</option>
+                    <option value="17:00(из A в B)">17:00(из A в B)</option>
+                    <option value="17:30(из A в B)">17:30(из A в B)</option>
+                    <option value="17:45(из A в B)">17:45(из A в B)</option>
+                    <option value="18:00(из A в B)">18:00(из A в B)</option>
+                    <option value="18:30(из A в B)">18:30(из A в B)</option>
+                    <option value="18:45(из A в B)">18:45(из A в B)</option>
+                    <option value="19:00(из B в A)">19:00(из B в A)</option>
+                    <option value="19:15(из A в B)">19:15(из A в B)</option>
+                    <option value="19:35(из B в A)">19:35(из B в A)</option>
+                    <option value="19:45(из B в A)">19:45(из B в A)</option>
+                    <option value="20:00(из B в A)">20:00(из B в A)</option>
+                    <option value="20:20(из B в A)">20:20(из B в A)</option>
+                    <option value="21:50(из B в A)">21:50(из B в A)</option>
+                    <option value="21:55(из B в A)">21:55(из B в A)</option>
+                  </select>
+                </div>
+                <div class="timetable__two-way two-way-timetable _hidden">
+                  <label for="two-way">Время на обратный путь</label>
+                  <select disabled name="two-way" id="two-way" class="two-way-timetable__select">
+                    <option value="16:00(обратно в А)">16:00(обратно в А)</option>
+                    <option value="16:30(обратно в А)">16:30(обратно в А)</option>
+                    <option value="16:45(обратно в А)">16:45(обратно в А)</option>
+                    <option value="17:00(обратно в А)">17:00(обратно в А)</option>
+                    <option value="17:15(обратно в А)">17:15(обратно в А)</option>
+                    <option value="18:00(обратно в А)">18:00(обратно в А)</option>
+                    <option value="18:30(обратно в А)">18:30(обратно в А)</option>
+                    <option value="18:45(обратно в А)">18:45(обратно в А)</option>
+                    <option value="19:00(обратно в А)">19:00(обратно в А)</option>
+                    <option value="19:15(обратно в А)">19:15(обратно в А)</option>
+                    <option value="19:35(обратно в А)">19:35(обратно в А)</option>
+                  </select>
+                </div>
+                <div class="timetable__counts counts-timetable">
+                  <label for="num">Количество билетов</label>
+                  <input disabled type="number" id="num" name="num" />Количество
+                  <button disabled>Посчитать</button>
+                </div>
+              </form>
+            </div>
+            <div class="timetable__content">
+              <p>
+                <!-- Вы выбрали <span class="timetable__count-ticket">4</span> билета по маршруту
+                <span class="timetable__type-direction">из A в B</span> стоимостью
+                <span class="timetable__price">4000</span>р. Это путешествие займет у вас
+                <span class="timetable__time-take">40</span> минут. Теплоход отправляется в
+                <span class="timetable__send">12-00</span>, а прибудет в
+                <span class="timetable__arrives">18-00</span>. -->
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.7/jstz.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

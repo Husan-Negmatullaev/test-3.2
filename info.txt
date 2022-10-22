@@ -1,0 +1,53 @@
+
+window.onload = function () {
+  const ticketForm = document.forms.ticket;
+  const routeSelect = ticketForm.route;
+  const timeSelect = ticketForm.time;
+  const numInput = ticketForm.num;
+
+  let chooseRoute;
+
+  const cyrillicRegExp = /[а-яА-ЯЁё]/g;
+
+  const routeOptionsArr = Array.from(routeSelect.options)
+    .map(option => option.value
+      .replace(cyrillicRegExp, "")
+      .replace(/\s/g, '')
+    );
+
+  // const timeOptionsArr = Array.from(timeSelect.options)
+  //   .map(option => option.value
+  //     .replace(cyrillicRegExp, "")
+  //     .replace(/\s/g, '')
+  //     .replace(/[()]/g, " ")
+  //     .trimEnd()
+  //   );
+
+  console.log(routeOptionsArr);
+
+  routeSelect.addEventListener("change", (event) => {
+    const targetItem = event.target;
+
+    chooseRoute = targetItem.value
+      .replace(cyrillicRegExp, "")
+      .replace(/\s/g, '');
+
+    timeSelect.disabled = false;
+  });
+
+  timeSelect.addEventListener("change", (event) => {
+    const targetItem = event.target;
+    const removeSymbols = targetItem.value
+      .replace(cyrillicRegExp, "")
+      .replace(/\s/g, "")
+      .replace(/[()]/g, " ")
+      .trimEnd();
+
+    if (!chooseRoute === "ABA") {
+      console.log(removeSymbols.includes(chooseRoute));
+    }
+
+  });
+}
+
+      По московскому отправляется в ${localeTime.arrivedTime}, а прибудет в ${changeHoursTo(localeTime.arrivedTime)}

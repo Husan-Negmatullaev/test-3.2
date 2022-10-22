@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* ======================================================== */
+
+.page {
+}
+.page__timetable {
+  margin: 40px 0px;
+}
+
+/* ======================================================== */
+
+.timetable {
+}
+.timetable__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.timetable__body {
+}
+.timetable__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.timetable__two-way {
+}
+.timetable__direction {
+}
+.timetable__content p {
+  margin: 20px 0px;
+}
+.dicrection-timetable {
+}
+.dicrection-timetable__select {
+}
+.timetable__choose {
+}
+.choose-timetable {
+}
+.timetable__counts {
+}
+.counts-timetable {
+}
+
+._hidden {
+  display: none;
+}
